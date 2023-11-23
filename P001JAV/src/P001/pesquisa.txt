@@ -1,0 +1,261 @@
+Pergunta: O que é uma classe em Java e qual é a diferença entre uma classe e um
+objeto? Dê 5 exemplos mostrando-os em C++ e em Java. 
+
+Resposta: 
+Um objeto é a instância de uma classe, na qual possui um estado e um comportamento.
+Já a classe, é um grupo que engloba os objetos com propriedades comuns. É um modelo ou blueprint a partir do qual os objetos são criados. É uma entidade lógica. Não pode ser físico.
+Em Java, uma classe pode conter: Variáveis, Métodos, Construtores, Blocos, Classe e interface.
+
+A principal diferença entre as classes em java e em c++, é que em java só declarar 
+se os atributos métodos são públicos ou privados em cada linha, 
+enquanto em c++, declara uma vez e funciona para todas as linhas abaixo.
+
+Exemplos de classe:
+
+// Exemplo 1 em C++
+class Celular {
+public:
+    string marca;
+};
+
+// Exemplo 2 em C++
+class Circulo {
+public:
+    double raio;
+};
+
+// Exemplo 3 em C++
+class Livro {
+public:
+    string titulo, autor, editora;
+    int anoPublicacao;
+};
+
+// Exemplo 4 em C++
+class Pessoa {
+public:
+    string nome, sobrenome;
+    int idade;
+    float altura;
+};
+
+// Exemplo 5 em C++
+class Retangulo {
+public:
+    float comprimento, largura;
+};
+
+// Exemplo 1 em Java
+
+public class Celular {
+    private String marca;
+}
+
+// Exemplo 2 em Java
+class Circulo {
+    private double raio;
+}
+
+// Exemplo 3 em Java
+class Livro {
+    private String titulo, autor, editora;
+    private int anoPublicacao;
+}
+// Exemplo 4 em Java
+class Pessoa {
+   private String nome, sobrenome;
+   private int idade;
+   private float idade;
+}
+
+// Exemplo 5 em Java
+class Retangulo {
+   private float comprimento, largura;
+}
+
+Pergunta: Como você declara uma variável em Java e quais são os tipos de dados 
+primitivos mais comuns? Faça um paralelo entre isso e a mesma coisa na 
+linguagem C++.
+
+Resposta: Tanto em Java quanto em c++, a variável é declarada especificando 
+o tipo de dado seguido pelo nome da variável. A diferença entre as duas linguagens é 
+que em Java é necessário identificar se a variável é private ou public em cada linha, enquanto em c++
+é possível generalizar. Em java, os principais dados primitivos são:
+int: Números inteiros.
+double: Números de ponto flutuante.
+boolean: Valores booleanos (verdadeiro ou falso).
+char: Caracteres Unicode.
+
+Pergunta: Explique o conceito de herança em Java e como você pode criar uma 
+subclasse a partir de uma classe existente. Faça um paralelo com C++, 
+apresentando 5 exemplos.
+
+Herança em Java é o mecanismo que permite que uma classe (subclasse) herde os atributos e métodos 
+de outra classe (superclasse). Isso significa que a subclasse pode usar os membros 
+da superclasse sem precisar redefini-los. Exemplos, em paralelo ao c++:
+
+// Exemplo 1 em Java:
+
+class Veiculo {
+    void ligar() {
+        System.out.println("Veículo ligado");
+    }
+}
+
+class Carro extends Veiculo {
+    void acelerar() {
+        System.out.println("Carro acelerando");
+    }
+}
+
+//Exemplo 1 em C++
+class Veiculo {
+public:
+    void ligar() {
+        cout << "Veículo ligado" << endl;
+    }
+};
+
+class Carro : public Veiculo {
+public:
+    void acelerar() {
+        cout << "Carro acelerando" << endl;
+    }
+};
+
+// Exemplo 2 em java:
+class Figura {
+    public void desenhar() {
+        System.out.println("Desenhando uma figura");
+    }
+}
+
+class Circulo extends Figura {
+    public void desenhar() {
+        System.out.println("Desenhando um círculo");
+    }
+}
+
+// Exemplo 2 em C++
+class Figura {
+public:
+    void desenhar() {
+        cout << "Desenhando uma figura" << endl;
+    }
+};
+
+class Circulo : public Figura {
+public:
+    void desenhar() {
+        cout << "Desenhando um círculo" << endl;
+    }
+};
+
+// Exemplo 3 em java:
+class Pessoa {
+    private String nome;
+    public void falar() {
+        System.out.println("Pessoa falando");
+    }
+}
+
+class Estudante extends Pessoa {
+    public void estudar() {
+        System.out.println("Estudante estudando");
+    }
+}
+
+//Exemplo 3 em C++
+class Pessoa {
+public:
+    string nome;
+    void falar() {
+        cout << "Pessoa falando" << endl;
+    }
+};
+
+class Estudante : public Pessoa {
+public:
+    void estudar() {
+        cout << "Estudante estudando" << endl;
+    }
+};
+
+//Exemplo 4 em java: 
+class Fruta {
+    prvate String cor;
+    public void comer() {
+        System.out.println("Comendo uma fruta");
+    }
+}
+
+class Maca extends Fruta {
+    public void comer() {
+        System.out.println("Comendo uma maçã");
+    }
+}
+
+//Exemplo 4 em C++
+
+class Fruta {
+public:
+    string cor;
+    void comer() {
+        cout << "Comendo uma fruta" << endl;
+    }
+};
+
+class Maca : public Fruta {
+public:
+    void comer() {
+        cout << "Comendo uma maçã" << endl;
+    }
+};
+
+//Exemplo 5 em java:
+
+class InstrumentoMusical {
+    public void tocar() {
+        System.out.println("Tocando um instrumento musical");
+    }
+}
+
+class Guitarra extends InstrumentoMusical {
+    public void tocar() {
+        System.out.println("Tocando uma guitarra");
+    }
+}
+
+\\Exemplo 5 em c++:
+
+class InstrumentoMusical {
+public:
+    void tocar() {
+        cout << "Tocando um instrumento musical" << endl;
+    }
+};
+
+class Guitarra : public InstrumentoMusical {
+public:
+    void tocar() {
+        cout << "Tocando uma guitarra" << endl;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
